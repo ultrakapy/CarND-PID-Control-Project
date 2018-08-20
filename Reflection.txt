@@ -4,7 +4,7 @@ The P component determines how hard / quickly to steer toward the center of the 
 The D component prevents the car from overshooting the center of the road too much due to the P component, so it
 gradually approaches the center and doesn't overshoot too much. This component tries to minimize how much the car
 oscillates around the center of the road.
-Finally, the I component counts for any systematic bias that causes a consistently large CTE.
+Finally, the I component accounts for any systematic bias that causes a consistently large CTE.
 
 
 Describe how the final hyperparameters were chosen:
