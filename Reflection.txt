@@ -1,0 +1,14 @@
+Describe the effect each of the P, I, D components had in your implementation:
+
+The P component determines how hard / quickly to steer toward the center of the road.
+The D component prevents the car from overshooting the center of the road too much due to the P component, so it
+gradually approaches the center and doesn't overshoot too much. This component tries to minimize how much the car
+oscillates around the center of the road.
+Finally, the I component counts for any systematic bias that causes a consistently large CTE.
+
+
+Describe how the final hyperparameters were chosen:
+
+I thought about implementing the Twiddle algorithm, but since there is currently no way to run the simulator in headless
+mode I decided to tune the parameters manually. I started by setting the P parameter to -1.0 and the other parameters to
+0.0 then running and tuning the P parameter for a few laps. I repeated the process for the I and D parameters.
